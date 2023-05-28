@@ -26,12 +26,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+#phy2_h29vk0$8v9$wb0r087#8w$^&u@)y-71u^pl!ss720ia'
+i
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["cheovermeyer.com", "www.cheovermeyer.com"]
+ALLOWED_HOSTS = ["", ""]
 
 
 # Application definition
@@ -60,9 +61,6 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://66.135.17.221",
-    "https://www.cheovermeyer.com",
-    "https://cheovermeyer.com",
     "http://localhost:8080",
     "http://127.0.0.1:8080"
 ]
