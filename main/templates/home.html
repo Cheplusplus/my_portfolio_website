@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block home %}
+<div class="banner">
+    <img src="{% static 'logo.png' %}" alt="logo" width="200px" height="200px">
+    <h1>Software Developer</h1>
+    
+</div>
+{% endblock home %}
+{% block content %}
+<p class="center">
+    "Hello and welcome! I'm Che, I am a junior software developer with a passion for coding and <br>
+    problem-solving. With experience in languages such as Python, JavaScript and C++, I am <br>
+    committed to developing efficient and scalable software solutions for businesses and <br>
+    organizations. I am dedicated to learning and staying up-to-date with the latest technologies <br>
+    to improve my skills and provide value to clients. Explore my portfolio and see how my <br>
+    experience and enthusiasm can benefit your projects"
+</p>
+
+<p class="center">My skills:</p>
+<div class="grid">
+    <ul id="banner-list">
+        <li>Python</li>
+        <li>Javascript</li>
+        <li>C++</li>
+        <li>Django</li>
+        <li>Flutter</li>
+        <li>React</li>
+    </ul>
+</div>
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% load static %}
+    {% block content %}
+        <h1>Physics is fun!</h1>
+        <p>
+            A physics engine is a software library or program that simulates the behavior of physical objects in a virtual environment. It uses mathematical models and algorithms to calculate the interactions between objects such as gravity, friction, collisions, and other physical properties.
+            Physics engines are commonly used in video games, virtual reality, and simulation software to create realistic movements and interactions between objects. They can also be used in scientific research, engineering, and architecture to simulate and test designs in a virtual environment before building them in the real world.
+            Some of the popular physics engines used in the industry include Bullet, PhysX, Havok, and Box2D, each with their own unique features and strengths.
+        </p>
+        <p>
+            Below is a very basic implemention of physics. The balls are being pulled downwards by gravity and they change direction when coliding with the walls and floor. Each collision uses up energy and so the balls eventually stop bouncing. There is also a basic implemention of air resistance so the balls are also slowing down just by moving through space.
+        </p>
+        <p>Click on the box below to restart the simulation.</p>
+        <canvas id="grid" width="512" height="512"></canvas>
+        <div class="slidecontainer">
+            <p id="balls_amount"></p>
+            <input type="range" min="5" max="30" value="12" class="slider" id="balls_slider">
+          </div>
+        <div>
+            <button id="earth" class="btn">Earth</button>
+            <button id="moon" class="btn">Moon</button>
+            <button id="jupiter" class="btn">Jupiter</button>
+        </div>
+        <script async>
+            let canvas = document.getElementById("grid");
+            let ctx = canvas.getContext("2d");
+        </script>
+        <script src="{% static 'balls.js' %}"></script>
+    {% endblock content %}

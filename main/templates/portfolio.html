@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+<h1 style="text-align: center;">Portfolio</h1>
+<div class="grid">
+    <a href="/sudoku"><div class="grid-item">
+        <h2>Sudoku Puzzle Game</h2>
+        <img src="{% static 'sudoku.png' %}" width="500px">
+    </div></a>
+    <a href="/pathfinder"><div class="grid-item">
+        <h2>A* Path Finder</h2>
+        <img src="{% static 'astar.png' %}" width="500px" style="margin-top: 25%;">
+    </div></a>
+</div>
+<div class="grid">
+    <a href="/instagram"><div class="grid-item">
+        <h2>Instagram Bot</h2>
+        <img src="{% static 'onlycats.png' %}" width="500px">
+    </div></a>
+    <a href="/balls"><div class="grid-item">
+        <h2>Physics Simulation</h2>
+        <img src="{% static 'balls.png' %}" width="500px">
+    </div></a>
+</div>
+{% endblock content %}

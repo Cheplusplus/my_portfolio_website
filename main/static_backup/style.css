@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+:root {
+  --container-width: 1366px;
+  --primary-colour: #2492eb;
+  --feature-colour: #19F6E4;
+  --white: #f2f2f2;
+  --black: #262626;
+}
+
+body {
+    background-color: var(--white);
+    font-family: sans-serif;
+    color: var(--black);
+    font-size: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.content {
+  margin: 50px;
+  width: 1920px;
+}
+
+header {
+    background-color: #181d27;
+    padding: 1em 0 2em 0;
+    width: 100vw;
+    margin: auto;
+}
+
+footer {
+    position: relative;
+    background: #181d27;
+    padding: 5em 0 3em 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 800;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.5em;
+    margin: 25px 0;
+    text-decoration: underline;
+}
+
+h3 {
+  font-weight: 550;
+}
+
+canvas {
+  border: 1px solid black;
+}
+
+ul.main-menu {
+  position: absolute;
+  top: 20px;
+  right: 130px;
+}
+
+ul.menu {
+  list-style-type: none;
+  padding: 0;
+}
+.menu li {
+  display: inline-block;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 0.8em;
+  margin: 0 10px;
+  padding: 0;    
+}
+
+.menu li a:hover{
+  text-decoration: underline;
+}
+
+.banner {
+  background: radial-gradient(ellipse at 50% 50%, #2c364a ,#161b23 70%);
+  padding: 5em 0 3em 0;
+  margin: 0;
+  color: var(--white);
+  width: 100%;
+  text-align: center;
+}
+
+.banner > * {
+  margin: 10px;
+}
+
+.banner ul {
+  list-style-position: inside;
+  text-align: left;
+  margin: 15px auto;
+  max-width: 320px;
+  font-size: 0.8em;
+  padding: 0;
+}
+
+.banner ul li {
+  margin-left: 32%;
+}
+
+.btn {
+  background: transparent;
+  margin: 10px;
+  max-width: 300px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  padding: 0.1rem 1.5rem;
+  background-color: var(--primary-colour);
+  color: var(--white);
+  border-color: var(--feature-colour);
+  cursor: pointer;
+}
+
+.sudoku-square {
+  padding: 15px;
+  border: 1px solid black;
+  font-size: 1.5em;
+  width: calc(900px/9);
+  height: calc(900px/9);
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+}
+
+.grid-item {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 4%;
+  height: 100%;
+}
+
+.grid-item h2 {
+  color: black;
+  margin: 0 auto;
+}
+
+
+
+.grid img {
+  margin: 30px;
+}
+
+

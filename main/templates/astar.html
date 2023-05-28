@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+  <h1>A* path finding</h1>
+  <p>
+    The A* (A-star) path finding algorithm is a widely used method to find the shortest route between two points. It's an effective solution for various fields such as computer graphics, robotics, and video games. The algorithm works by evaluating each possible next step based on both the current distance traveled and an estimate of the remaining distance to the target. This estimate is calculated using a heuristic function, which must be consistent to ensure the algorithm finds the optimal path.
+    One of the key benefits of A* is its ability to handle changes in the environment during the path finding process. For example, if a portion of the map becomes blocked, the algorithm can quickly adjust its calculations and find a new path. However, it's important to keep in mind that the A* algorithm requires a lot of memory and computational power, especially in large or complex graphs.
+    In conclusion, A* is a powerful and flexible tool for finding the shortest path between two points. Although it has its limitations, it's still a widely used solution in various fields.
+  </p>
+  <p>
+    This demo shows off a simple implemention of the algorithm.
+
+  </p>
+  <p>
+    How to use this demo:
+  </p>
+  <ol>
+    <li>Hold Left Click and drag on the black box to draw the obstacles - Right Click to remove them</li>
+    <li>Click "Set Start & End"</li>
+    <li>Click anywhere in the box to set the start position and then click somewhere else to set the end postion. They will appear as a green and red pixel respectively.</li>
+    <li>Click "Go!" to find the shortest path between the points</li>
+    <li>Continue drawing obstacles or reset the start and end position and press "Go!" again.</li>
+  </ol>
+  <canvas id="grid" width="512" height="512"></canvas>
+  <div style="float: left; margin-right: 25px; width: 300px;">
+    <button class="btn" id="set_markers">Set Start & End</button>
+    <button class="btn" id="get_path">Go!</button>
+  </div>
+  <script async>
+    let canvas = document.getElementById("grid");
+    let ctx = canvas.getContext("2d");
+  </script>
+  <script src="{% static 'obstacles.js' %}"></script>
+  <script src="{% static 'markers.js' %}"></script>
+  
+{% endblock content %}
+
+

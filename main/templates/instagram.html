@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+    <h1>Instagram Bot account</h1>
+    <p>
+        I took on this project to learn more about capturing HTTP requests and using APIs. This is an instagram account which is fully managed by a bot. The functionality of the bot includes:
+    </p>
+    <ul>
+        <li>Finding images</li>
+        <li>Posting images</li>
+        <li>Replying to comments</li>
+        <li>Commenting on and 'liking' other users posts to increase engagement</li>
+        <li>Following and unfollowing other users to increase follow-back rate.</li>
+    </ul>
+    <p>
+        This bot uses the Instagram public API as well as the private API and so I had to mimic how the application communicates with the backend.<br>
+        To do this I had to use a tool to capture the HTTP requests so that I could mimic the headers and send the request to the correct URL.<br>
+        Once I had this information I could now make requests to Instagrams servers as though I was using the app directly.<br>
+        This works out but I did run into issues with rate limiting which caused me to park the idea after a month.
+    </p>
+    <p>
+        To find images I used the Unsplash API. This API has hundreds of thousands of free to use images which can be resized by providing the correct parameters in the HTTP request.<br>
+        Once I had a link to the images I was able to use the Instagram public API which provides methods to upload new images programmaticaly.<br>
+        The public API also allows commenting on your own posts so I used this to reply to users when they comment on my posts. This drives engagement and gives the sense that the account is managed by a human.<br>
+        In order to comment and like the posts of other users I had to step over to the private API. These calls mimic the way in which the instagram app and website communicate with their servers.<br>
+        To wrap it all up and make it more usable I created a simple command line interface with which to interact with the bot. You can use this interface to change the account you are working on and to start/stop the different functionalities of the bot. 
+    </p>
+    <p>
+        After running the account for 1 month it had uploaded 57 posts, gained 2100 new followers, 4300 likes on the posts and 13900 views on the posts.
+    </p>
+    <img src="{% static 'onlycats.png' %}">
+{% endblock content %}
